@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            line-height: 1.4;
         }
         a {
             text-decoration: none;
@@ -34,7 +35,7 @@
     — Codec: libx264.<br>
     — Forced keyframes = 3 seconds (considering the further DASH segment duration).<br>
     — Bitrate (VBR) defined through CRF.<br>
-    — <code>-sc_threshold</code> was <span>NOT</span> defined. (I avoided it to keep "organic" keyframes based on scenes as-is. The segmenter's cutting with the defined time interval works perfectly with the forced keyframe interval).<br>
+    — <code>-sc_threshold 0</code> <span>was not</span> defined. (to keep "organic" keyframes based on scenes as-is. The segmenter's cutting with the defined time interval works perfectly with the forced keyframe interval).<br>
     BTW: I tried to pass all MP4Box operations with this "classical" flag, but it didn't help.<br>
     </p> 
 </body>
