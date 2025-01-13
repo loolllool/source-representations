@@ -16,6 +16,9 @@
         a:hover {
             text-decoration: underline;
         }
+        span {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -24,5 +27,15 @@
         <li><a href="representations_(3v+1a)/">representations_(3v+1a)</a></li>
         <li><a href="representations_3(v+a)/">representations_3(v+a)</a></li>
     </ul>
+    
+    <p>
+    All representations were produced from the MASTER file with the following FFMPEG parameters:<br>
+    — Framerate not defined (inherited from the uploaded source).<br>
+    — Codec: libx264.<br>
+    — Forced keyframes = 3 seconds (considering the further DASH segment duration).<br>
+    — Bitrate (VBR) defined through CRF.<br>
+    — <code>-sc_threshold</code> was <span>NOT</span> defined. (I avoided it to keep "organic" keyframes based on scenes as-is. The segmenter's cutting with the defined time interval works perfectly with the forced keyframe interval).<br>
+    BTW: I tried to pass all MP4Box operations with this "classical" flag, but it didn't help.<br>
+    </p> 
 </body>
 </html>
